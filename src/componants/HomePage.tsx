@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ArrowRight, Palette, Sparkles, Heart, Star, Users, Plus } from 'lucide-react';
 
 // 타입 정의
@@ -86,15 +87,15 @@ const CardContent: React.FC<CardContentProps> = ({ children, className = '' }) =
 export const HomePage: React.FC = () => {
     const { isAuthenticated, user } = useAuth();
     const [isVisible, setIsVisible] = useState(false);
+    const navigate = useNavigate(); // React Router의 navigate 함수
 
     useEffect(() => {
         setIsVisible(true);
     }, []);
 
-    // 페이지 이동 함수 (실제로는 React Router 등 사용)
+    // 페이지 이동 함수
     const navigateTo = (path: string) => {
-        console.log(`Navigate to: ${path}`);
-        // 실제 구현에서는 React Router의 navigate 함수 사용
+        navigate(path);
     };
 
     // 로그인하지 않은 경우 - 랜딩 페이지
@@ -112,7 +113,7 @@ export const HomePage: React.FC = () => {
                             <div className="space-y-6">
                                 <div className="inline-flex items-center px-4 py-2 bg-amber-100 rounded-full text-amber-800 font-medium text-sm">
                                     <Star className="w-4 h-4 mr-2 text-amber-600" />
-                                    2024 트렌드 컬러 업데이트
+                                    2025 트렌드 컬러 업데이트
                                 </div>
                                 <h1 className="text-4xl md:text-6xl font-bold text-amber-900 leading-tight font-serif">
                                     나에게 <span className="bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">FIT</span>한<br />
@@ -152,7 +153,7 @@ export const HomePage: React.FC = () => {
                                 <img
                                     src="/images/tonefit-logo.png"
                                     alt="TONEFIT Character"
-                                    className="w-3/4 max-w-md mx-auto shadow-lg hover:scale-105 transition-transform duration-700"
+                                    className="w-full max-w-md mx-auto hover:scale-105 transition-transform duration-500"
                                 />
                             </div>
                             <div className="absolute inset-0 bg-gradient-to-r from-amber-200/30 to-orange-200/30 rounded-full blur-3xl animate-pulse"></div>
@@ -171,7 +172,7 @@ export const HomePage: React.FC = () => {
                         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                             {[
                                 { icon: Palette, title: "컬러 진단", desc: "나의 퍼스널 컬러 찾기", color: "amber" as const },
-                                { icon: Sparkles, title: "트렌드 컬러", desc: "2024 펜톤 컬러 보기", color: "red" as const },
+                                { icon: Sparkles, title: "트렌드 컬러", desc: "2025 펜톤 컬러 보기", color: "red" as const },
                                 { icon: Heart, title: "코디 추천", desc: "맞춤 스타일 제안", color: "orange" as const },
                                 { icon: Users, title: "커뮤니티", desc: "스타일 공유하기", color: "yellow" as const },
                             ].map((item, index) => (
@@ -236,15 +237,15 @@ export const HomePage: React.FC = () => {
                             icon: Palette,
                             title: "컬러 진단",
                             desc: user?.personalColor ? "재진단하기" : "진단 시작",
-                            color: "amber",
+                            color: "amber" as const,
                         },
-                        { href: "/pantone", icon: Sparkles, title: "트렌드 컬러", desc: "2024 펜톤 컬러", color: "red" },
-                        { href: "/coordination", icon: Heart, title: "코디 추천", desc: "맞춤 스타일", color: "orange" },
-                        { href: "/favorites", icon: Plus, title: "새 코디", desc: "스타일 만들기", color: "yellow" },
+                        { href: "/pantone", icon: Sparkles, title: "트렌드 컬러", desc: "2024 펜톤 컬러", color: "red" as const },
+                        { href: "/coordination", icon: Heart, title: "코디 추천", desc: "맞춤 스타일", color: "orange" as const },
+                        { href: "/favorites", icon: Plus, title: "새 코디", desc: "스타일 만들기", color: "yellow" as const },
                     ].map((item, index) => (
                         <Card
                             key={index}
-                            className="border-amber-200 hover:shadow-xl transition-all duration-500 hover:translate-y-[-4px] group cursor-pointer h-full"
+                            className="border-amber-200 hover:shadow-xl transition-all duration-500 hover:translate-y-[-4px] group h-full"
                             onClick={() => navigateTo(item.href)}
                         >
                             <CardContent className="p-6 text-center">
@@ -337,4 +338,3 @@ export const HomePage: React.FC = () => {
 };
 
 export default HomePage;
-//test
