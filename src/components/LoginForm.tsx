@@ -23,26 +23,28 @@ const LoginForm: React.FC<LoginFormProps> = ({
     })
 
     const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault()
-        setIsLoading(true)
+        e.preventDefault();
+        setIsLoading(true);
 
         try {
             if (isLogin) {
-                await onLogin?.(formData.email, formData.password)
+                await onLogin?.(formData.email, formData.password);
             } else {
                 if (formData.password !== formData.confirmPassword) {
-                    alert('비밀번호가 일치하지 않습니다.')
-                    return
+                    alert('비밀번호가 일치하지 않습니다.');
+                    return;
                 }
-                await onSignup?.(formData.email, formData.password, formData.name)
+                await onSignup?.(formData.email, formData.password, formData.name);
             }
+            // 로그인 또는 회원가입 성공 시 대시보드로 이동
+            navigate('/dashboard'); // 이 부분을 추가합니다.
         } catch (error) {
-            console.error('Authentication error:', error)
-            alert('인증 중 오류가 발생했습니다.')
+            console.error('Authentication error:', error);
+            alert('인증 중 오류가 발생했습니다.');
         } finally {
-            setIsLoading(false)
+            setIsLoading(false);
         }
-    }
+    };
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFormData(prev => ({

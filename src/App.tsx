@@ -1,15 +1,32 @@
-// App.tsx
+// import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import HomePage from "./componants/HomePage.tsx";
-import LoginForm from "./componants/LoginForm.tsx";
+import LoginForm from "./components/LoginForm";
+import LandingPage from "./components/LandingPage";
+import DashBoard from "./components/DashBoard.tsx";
+import {useState} from "react";
+
+interface User {
+    name: string;
+    personalColor?: string;
+}
 
 function App() {
+    const [user, setUser] = useState<User | null>(null);
+
+    const handleLogin = async () => {
+        const exampleUser: User = {
+            name: "홍길동",
+            personalColor: "봄 웜톤"
+        };
+        setUser(exampleUser);
+    };
+
     return (
         <Router>
             <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/auth/login" element={<LoginForm />} />
-                {/* 다른 라우트들도 추가 */}
+                <Route path="/" element={<LandingPage />} />
+                <Route path="/auth/login" element={<LoginForm onLogin={handleLogin} />} />
+                <Route path="/dashboard" element={user ? <DashBoard user={user} /> : <div>Loading...</div>} />
             </Routes>
         </Router>
     );
