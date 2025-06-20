@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useRoute, Link } from 'wouter';
 import PaletteViewer from '@/components/PaletteViewer';
-import OutfitCard from '@/components/OutfitCard';
+import OutfitCard, { getOutfitsByTone } from '@/components/OutfitCard';
 import { PersonalColorType, ColorData, OutfitRecommendation } from '@/types/color';
 import colorDataJson from '@/data/colorData.json';
 
@@ -17,35 +17,7 @@ const Results = () => {
     'winter': '겨울쿨 (Winter)'
   };
 
-  const outfitRecommendations: OutfitRecommendation[] = [
-    {
-      id: '1',
-      title: '피치 오피스 룩',
-      description: '부드럽고 따뜻한 피치 컬러로 완성한 전문적인 오피스 스타일',
-      imageUrl: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600',
-      colors: ['#FFBE98', '#FAD2C2', '#F4C2A1'],
-      tags: ['블라우스', '슬랙스', '백'],
-      personalColorType: selectedColorType
-    },
-    {
-      id: '2',
-      title: '봄 캐주얼 룩',
-      description: '화사한 봄 컬러로 완성한 편안하고 세련된 일상 스타일',
-      imageUrl: 'https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600',
-      colors: ['#FFE3D1', '#FFF2E0', '#FAD2C2'],
-      tags: ['니트', '데님', '스니커즈'],
-      personalColorType: selectedColorType
-    },
-    {
-      id: '3',
-      title: '코랄 이브닝 룩',
-      description: '생동감 있는 코랄 컬러로 완성한 우아한 저녁 스타일',
-      imageUrl: 'https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600',
-      colors: ['#FF6B6B', '#FFB3B3', '#FF9999'],
-      tags: ['드레스', '힐', '액세서리'],
-      personalColorType: selectedColorType
-    }
-  ];
+  const outfitRecommendations = getOutfitsByTone(selectedColorType);
 
   const handleShare = async () => {
     const shareData = {
@@ -106,7 +78,7 @@ const Results = () => {
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {outfitRecommendations.map((outfit) => (
-                <OutfitCard key={outfit.id} outfit={outfit} />
+                <OutfitCard key={outfit.id} outfit={outfit} tone={selectedColorType} />
               ))}
             </div>
           </div>

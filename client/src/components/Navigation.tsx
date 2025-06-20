@@ -16,18 +16,24 @@ const Navigation = () => {
           </div>
           <div className="hidden md:flex items-center space-x-8">
             <Link href="/">
-              <a className={`text-gray-700 hover:text-primary transition-colors font-medium ${
+              <span className={`text-gray-700 hover:text-primary transition-colors font-medium cursor-pointer ${
                 location === '/' ? 'text-primary' : ''
               }`}>
                 홈
-              </a>
+              </span>
             </Link>
-            <a href="#about" className="text-gray-700 hover:text-primary transition-colors font-medium">
-              컬러 가이드
-            </a>
-            <a href="#styles" className="text-gray-700 hover:text-primary transition-colors font-medium">
-              스타일링
-            </a>
+            <Link href="/color-guide">
+              <span className={`text-gray-700 hover:text-primary transition-colors font-medium cursor-pointer ${
+                location === '/color-guide' ? 'text-primary' : ''
+              }`}>
+                컬러 가이드
+              </span>
+            </Link>
+            <Link href="/quiz">
+              <span className="bg-primary hover:bg-pink-600 text-white px-4 py-2 rounded-full transition-colors font-medium cursor-pointer">
+                내 컬러 진단 키트
+              </span>
+            </Link>
           </div>
           <button className="md:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
