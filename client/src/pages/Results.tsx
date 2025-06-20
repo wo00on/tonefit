@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useRoute, Link } from 'wouter';
 import PaletteViewer from '@/components/PaletteViewer';
 import OutfitCard, { getOutfitsByTone } from '@/components/OutfitCard';
+import StyleItem, { getStyleItemsByTone } from '@/components/StyleItem';
 import { PersonalColorType, ColorData, OutfitRecommendation } from '@/types/color';
 import colorDataJson from '@/data/colorData.json';
 
@@ -18,6 +19,7 @@ const Results = () => {
   };
 
   const outfitRecommendations = getOutfitsByTone(selectedColorType);
+  const styleItems = getStyleItemsByTone(selectedColorType);
 
   const handleShare = async () => {
     const shareData = {
@@ -71,11 +73,29 @@ const Results = () => {
             selectedColorType={selectedColorType} 
           />
 
-          {/* Outfit Styling Cards */}
+          {/* Individual Style Items */}
           <div className="mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
-              추천 스타일링
+            <h3 className="text-3xl font-bold text-gray-900 text-center mb-4">
+              추천 스타일 아이템
             </h3>
+            <p className="text-gray-600 text-center mb-12">
+              {seasonNames[selectedColorType]} 타입에 어울리는 개별 아이템들을 확인해보세요
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+              {styleItems.map((item) => (
+                <StyleItem key={item.id} item={item} tone={selectedColorType} />
+              ))}
+            </div>
+          </div>
+
+          {/* Complete Outfit Styling */}
+          <div className="mb-16">
+            <h3 className="text-3xl font-bold text-gray-900 text-center mb-4">
+              완성된 코디네이션
+            </h3>
+            <p className="text-gray-600 text-center mb-12">
+              전체적인 룩 완성을 위한 코디네이션 예시입니다
+            </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {outfitRecommendations.map((outfit) => (
                 <OutfitCard key={outfit.id} outfit={outfit} tone={selectedColorType} />
