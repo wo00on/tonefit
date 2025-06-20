@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useLocation } from 'wouter';
 import { PersonalColorType } from '@/types/color';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 interface QuizQuestion {
   id: number;
@@ -18,6 +19,7 @@ interface QuizQuestion {
 
 const Quiz = () => {
   const [, setLocation] = useLocation();
+  const { t } = useLanguage();
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [scores, setScores] = useState({
     spring: 0,

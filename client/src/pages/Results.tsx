@@ -5,10 +5,12 @@ import OutfitCard, { getOutfitsByTone } from '@/components/OutfitCard';
 import StyleItem, { getStyleItemsByTone } from '@/components/StyleItemNew';
 import { PersonalColorType, ColorData, OutfitRecommendation } from '@/types/color';
 import colorDataJson from '@/data/colorData.json';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Results = () => {
   const [match, params] = useRoute('/results/:colorType');
   const [colorData] = useState<ColorData>(colorDataJson);
+  const { t } = useLanguage();
   const selectedColorType = params?.colorType as PersonalColorType;
 
   const seasonNames = {
@@ -60,10 +62,10 @@ const Results = () => {
           {/* Selected Color Type Display */}
           <div className="text-center mb-16 animate-fade-in">
             <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              <span className="text-primary">{seasonNames[selectedColorType]}</span> 타입 추천 컬러
+              {t('results.yourType')}: <span className="text-primary">{t(`personalColor.${selectedColorType}`)}</span>
             </h3>
             <p className="text-lg text-gray-600">
-              2020-2025 펜톤 컬러와 조화로운 팔레트를 확인하세요
+              {t('results.pantoneColors')}
             </p>
           </div>
 
@@ -76,10 +78,10 @@ const Results = () => {
           {/* Individual Style Items */}
           <div className="mb-16">
             <h3 className="text-3xl font-bold text-gray-900 text-center mb-4">
-              추천 스타일 아이템
+              {t('results.styleItems')}
             </h3>
             <p className="text-gray-600 text-center mb-12">
-              {seasonNames[selectedColorType]} 타입에 어울리는 개별 아이템들을 확인해보세요
+              {t(`personalColor.${selectedColorType}`)} 타입에 어울리는 개별 아이템들을 확인해보세요
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
               {styleItems.map((item) => (
@@ -91,7 +93,7 @@ const Results = () => {
           {/* Complete Outfit Styling */}
           <div className="mb-16">
             <h3 className="text-3xl font-bold text-gray-900 text-center mb-4">
-              완성된 코디네이션
+              {t('results.outfits')}
             </h3>
             <p className="text-gray-600 text-center mb-12">
               전체적인 룩 완성을 위한 코디네이션 예시입니다
@@ -110,7 +112,7 @@ const Results = () => {
                 <svg className="inline-block w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                 </svg>
-                다시 테스트하기
+                {t('results.backToHome')}
               </button>
             </Link>
             <button

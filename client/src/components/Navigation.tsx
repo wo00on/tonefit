@@ -1,7 +1,9 @@
 import { Link, useLocation } from 'wouter';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Navigation = () => {
   const [location] = useLocation();
+  const { t } = useLanguage();
 
   return (
     <nav className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
@@ -19,19 +21,19 @@ const Navigation = () => {
               <span className={`text-gray-700 hover:text-primary transition-colors font-medium cursor-pointer ${
                 location === '/' ? 'text-primary' : ''
               }`}>
-                홈
+                {t('nav.home')}
               </span>
             </Link>
             <Link href="/color-guide">
               <span className={`text-gray-700 hover:text-primary transition-colors font-medium cursor-pointer ${
                 location === '/color-guide' ? 'text-primary' : ''
               }`}>
-                컬러 가이드
+                {t('nav.colorGuide')}
               </span>
             </Link>
             <Link href="/quiz">
               <span className="bg-primary hover:bg-pink-600 text-white px-4 py-2 rounded-full transition-colors font-medium cursor-pointer">
-                내 컬러 진단 키트
+                {t('nav.quiz')}
               </span>
             </Link>
           </div>

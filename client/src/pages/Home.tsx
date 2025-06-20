@@ -2,9 +2,11 @@ import { useState } from "react";
 import { useLocation } from "wouter";
 import ColorSelector from "@/components/ColorSelector";
 import { PersonalColorType } from "@/types/color";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Home = () => {
   const [, setLocation] = useLocation();
+  const { t } = useLanguage();
   const [selectedColor, setSelectedColor] = useState<
     PersonalColorType | undefined
   >();
@@ -34,22 +36,16 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in">
             <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              TONEFIT이 제안하는
-              <br />
-              <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                퍼스널 × 펜톤 컬러 매칭
-              </span>
+              {t('home.title')}
             </h2>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-              퍼스널 컬러에 딱 맞는 트렌디한 펜톤 컬러 조합으로
-              <br />
-              나에게 가장 어울리는 컬러 스타일을 만나보세요
+              {t('home.subtitle')}
             </p>
             <button
               onClick={startColorTest}
               className="bg-primary hover:bg-pink-600 text-white font-semibold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
-              컬러 매칭 시작하기 →
+              {t('home.cta')}
             </button>
           </div>
         </div>

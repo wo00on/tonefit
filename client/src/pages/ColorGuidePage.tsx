@@ -1,7 +1,9 @@
 import { PersonalColorInfo } from '@/types/color';
 import colorDataJson from '@/data/colorData.json';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const ColorGuidePage = () => {
+  const { t } = useLanguage();
   const personalColorData: PersonalColorInfo[] = [
     {
       type: 'spring',
@@ -65,11 +67,10 @@ const ColorGuidePage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              컬러 가이드
+              {t('colorGuide.title')}
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-              퍼스널 컬러와 펜톤 컬러의 완벽한 조화를 위한<br />
-              전문적인 컬러 가이드를 제공합니다
+              {t('colorGuide.subtitle')}
             </p>
           </div>
         </div>
@@ -80,12 +81,10 @@ const ColorGuidePage = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-slide-up">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              TONEFIT이란?
+              {t('colorGuide.intro.title')}
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed">
-              TONEFIT은 퍼스널 컬러와 펜톤 컬러의 조화로, 나만의 색을 찾는 컬러 매칭 서비스입니다.<br />
-              개인의 피부톤, 모발, 눈동자 색상에 맞는 퍼스널 컬러와 매년 발표되는 트렌디한 펜톤 컬러를<br />
-              과학적으로 분석하여 가장 어울리는 색상 조합을 제안해드립니다.
+              {t('colorGuide.intro.desc')}
             </p>
           </div>
         </div>
@@ -184,10 +183,10 @@ const ColorGuidePage = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-slide-up">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              펜톤 컬러 타임라인 (2020-2025)
+              {t('colorGuide.pantone.title')}
             </h2>
             <p className="text-lg text-gray-600">
-              TONEFIT에서 활용하는 최근 6년간의 펜톤 컬러를 확인해보세요
+              {t('colorGuide.intro.desc')}
             </p>
           </div>
           
@@ -225,16 +224,16 @@ const ColorGuidePage = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              나만의 컬러 매칭 시작해보세요
+              {t('colorGuide.cta.title')}
             </h2>
             <p className="text-xl text-pink-100 mb-8">
-              퍼스널 컬러와 펜톤 컬러의 완벽한 조화를 경험해보세요
+              {t('colorGuide.cta.desc')}
             </p>
             <a 
               href="/"
               className="inline-block bg-white hover:bg-gray-100 text-primary font-semibold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
-              컬러 매칭 시작하기 →
+              {t('colorGuide.cta.button')}
             </a>
           </div>
         </div>
