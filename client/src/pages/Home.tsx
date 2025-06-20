@@ -25,7 +25,7 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen" style={{backgroundColor: '#F5F5F7'}}>
       {/* Hero Section */}
       <section
         id="home"

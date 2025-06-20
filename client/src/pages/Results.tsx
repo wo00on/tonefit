@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useRoute, Link } from 'wouter';
 import PaletteViewer from '@/components/PaletteViewer';
 import OutfitCard, { getOutfitsByTone } from '@/components/OutfitCard';
-import StyleItem, { getStyleItemsByTone } from '@/components/StyleItem';
+import StyleItem, { getStyleItemsByTone } from '@/components/StyleItemNew';
 import { PersonalColorType, ColorData, OutfitRecommendation } from '@/types/color';
 import colorDataJson from '@/data/colorData.json';
 
@@ -54,7 +54,7 @@ const Results = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen" style={{backgroundColor: '#F5F5F7'}}>
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Selected Color Type Display */}
