@@ -1,0 +1,50 @@
+{
+  "2025": {
+    "name": "Peach Fuzz",
+    "hex": "#FFBE98",
+    "spring": ["#FFE3D1", "#FFF2E0", "#FAD2C2", "#F4C2A1"],
+    "summer": ["#EADDE9", "#F3F3F3", "#E8F4FD", "#D2C8E1"],
+    "autumn": ["#D4A373", "#C49C7C", "#B8860B", "#CD853F"],
+    "winter": ["#E6E6E6", "#4B4B4B", "#2F4F4F", "#708090"]
+  },
+  "2024": {
+    "name": "Viva Magenta",
+    "hex": "#BB2649",
+    "spring": ["#FAD2C2", "#FFCBCB", "#FFE4E1", "#FFF0F5"],
+    "summer": ["#8F8FDB", "#D2C8E1", "#E6E6FA", "#F0F8FF"],
+    "autumn": ["#B85D57", "#8F3A34", "#A0522D", "#CD5C5C"],
+    "winter": ["#000000", "#3A3A3A", "#2F4F4F", "#4682B4"]
+  },
+  "2023": {
+    "name": "Classic Blue",
+    "hex": "#0F4C75",
+    "spring": ["#E8F4FD", "#B3D9F7", "#7EC8E3", "#4A90E2"],
+    "summer": ["#E8F4FD", "#B3D9F7", "#87CEEB", "#6495ED"],
+    "autumn": ["#4682B4", "#2F4F4F", "#36454F", "#1C3A47"],
+    "winter": ["#191970", "#0000CD", "#4169E1", "#1E90FF"]
+  },
+  "2022": {
+    "name": "Living Coral",
+    "hex": "#FF6B6B",
+    "spring": ["#FFE1E1", "#FFB3B3", "#FF8585", "#FF9999"],
+    "summer": ["#FFE4E1", "#FFCCCB", "#FFA07A", "#F0B3B3"],
+    "autumn": ["#CD5C5C", "#B22222", "#DC143C", "#A52A2A"],
+    "winter": ["#8B0000", "#DC143C", "#B22222", "#FF1493"]
+  },
+  "2021": {
+    "name": "Illuminating Yellow",
+    "hex": "#F5DF4D",
+    "spring": ["#FFFACD", "#FFFFE0", "#FFF8DC", "#F0E68C"],
+    "summer": ["#F5F5DC", "#FFFAF0", "#FDF5E6", "#FAF0E6"],
+    "autumn": ["#DAA520", "#B8860B", "#FFD700", "#F4A460"],
+    "winter": ["#FFFF00", "#FFD700", "#FFA500", "#FF8C00"]
+  },
+  "2020": {
+    "name": "Ultimate Gray",
+    "hex": "#939597",
+    "spring": ["#F5F5F5", "#E8E8E8", "#DCDCDC", "#D3D3D3"],
+    "summer": ["#F0F8FF", "#E6E6FA", "#F5F5F5", "#FFFAFA"],
+    "autumn": ["#A9A9A9", "#808080", "#696969", "#778899"],
+    "winter": ["#2F4F4F", "#708090", "#778899", "#B0C4DE"]
+  }
+}
