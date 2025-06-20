@@ -25,11 +25,11 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen" style={{backgroundColor: '#F5F5F7'}}>
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section
         id="home"
-        className="bg-gradient-to-br from-emerald-100 via-teal-50 to-cyan-100 py-20"
+        className="bg-gradient-to-br from-pink-100 via-purple-50 to-indigo-100 py-20"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in">

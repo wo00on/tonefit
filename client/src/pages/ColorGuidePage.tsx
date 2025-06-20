@@ -59,9 +59,9 @@ const ColorGuidePage = () => {
   ];
 
   return (
-    <div className="min-h-screen" style={{backgroundColor: '#F5F5F7'}}>
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-emerald-100 via-teal-50 to-cyan-100 py-20">
+      <section className="bg-gradient-to-br from-pink-100 via-purple-50 to-indigo-100 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -221,13 +221,13 @@ const ColorGuidePage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-teal-600">
+      <section className="py-20 bg-primary">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               나만의 컬러 매칭 시작해보세요
             </h2>
-            <p className="text-xl text-emerald-100 mb-8">
+            <p className="text-xl text-pink-100 mb-8">
               퍼스널 컬러와 펜톤 컬러의 완벽한 조화를 경험해보세요
             </p>
             <a 
