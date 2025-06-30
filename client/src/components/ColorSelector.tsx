@@ -10,9 +10,9 @@ interface ColorSelectorProps {
 const personalColorData: PersonalColorInfo[] = [
   {
     type: 'spring',
-    displayName: '봄웜 (Spring)',
-    description: '밝고 화사한 웜톤',
-    characteristics: ['선명하고 따뜻한 컬러'],
+    displayName: 'spring',
+    description: 'spring',
+    characteristics: ['spring'],
     icon: '🌱',
     bgColor: 'bg-warm-spring',
     gradientFrom: 'from-yellow-200',
@@ -21,9 +21,9 @@ const personalColorData: PersonalColorInfo[] = [
   },
   {
     type: 'summer',
-    displayName: '여름쿨 (Summer)',
-    description: '부드럽고 시원한 쿨톤',
-    characteristics: ['부드럽고 차가운 컬러'],
+    displayName: 'summer',
+    description: 'summer',
+    characteristics: ['summer'],
     icon: '💧',
     bgColor: 'bg-cool-summer',
     gradientFrom: 'from-blue-200',
@@ -32,9 +32,9 @@ const personalColorData: PersonalColorInfo[] = [
   },
   {
     type: 'autumn',
-    displayName: '가을웜 (Autumn)',
-    description: '깊고 따뜻한 웜톤',
-    characteristics: ['깊고 진한 웜 컬러'],
+    displayName: 'autumn',
+    description: 'autumn',
+    characteristics: ['autumn'],
     icon: '🍂',
     bgColor: 'bg-warm-autumn',
     gradientFrom: 'from-amber-200',
@@ -43,9 +43,9 @@ const personalColorData: PersonalColorInfo[] = [
   },
   {
     type: 'winter',
-    displayName: '겨울쿨 (Winter)',
-    description: '선명하고 차가운 쿨톤',
-    characteristics: ['선명하고 차가운 컬러'],
+    displayName: 'winter',
+    description: 'winter',
+    characteristics: ['winter'],
     icon: '❄️',
     bgColor: 'bg-cool-winter',
     gradientFrom: 'from-gray-200',
@@ -84,9 +84,9 @@ const ColorSelector = ({ onColorSelect, selectedColor }: ColorSelectorProps) => 
                 <span className="text-3xl">{colorInfo.icon}</span>
               </div>
               <h4 className="text-2xl font-bold text-gray-900 mb-3">
-                {colorInfo.displayName}
+                {t(`colorSelector.${colorInfo.displayName}`)}
               </h4>
-              <p className="text-gray-700 mb-4">{colorInfo.description}</p>
+              <p className="text-gray-700 mb-4">{t(`colorSelector.${colorInfo.description}.desc`)}</p>
               <div className="flex justify-center space-x-2 mb-4">
                 {colorInfo.type === 'spring' && (
                   <>
@@ -122,7 +122,7 @@ const ColorSelector = ({ onColorSelect, selectedColor }: ColorSelectorProps) => 
                 )}
               </div>
               <span className="text-sm text-gray-600">
-                {colorInfo.characteristics[0]}
+                {t(`colorSelector.${colorInfo.characteristics[0]}.detail`)}
               </span>
             </div>
           ))}
