@@ -1,4 +1,6 @@
 import { PersonalColorType, PersonalColorInfo } from '@/types/color';
+import { cn } from '@/lib/utils';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 interface ColorSelectorProps {
   onColorSelect: (colorType: PersonalColorType) => void;
@@ -53,18 +55,20 @@ const personalColorData: PersonalColorInfo[] = [
 ];
 
 const ColorSelector = ({ onColorSelect, selectedColor }: ColorSelectorProps) => {
+  const { t } = useLanguage();
+
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-slide-up">
           <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            퍼스널 컬러 타입을 선택하세요
+            {t('colorSelector.title')}
           </h3>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            각 계절별 특성에 맞는 컬러 팔레트를 제공해드립니다
+            {t('colorSelector.subtitle')}
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {personalColorData.map((colorInfo) => (
             <div
