@@ -68,6 +68,8 @@ const translations = {
     'category.accessories': '액세서리',
     'category.shoes': '신발',
     'category.bags': '가방',
+    'category.lipstick': '립스틱',
+    'category.glasses': '안경',
     
     // Common
     'common.loading': '로딩 중...',
@@ -225,6 +227,8 @@ const translations = {
     'category.accessories': 'Accessories',
     'category.shoes': 'Shoes',
     'category.bags': 'Bags',
+    'category.lipstick': 'Lipstick',
+    'category.glasses': 'Glasses',
     
     // Common
     'common.loading': 'Loading...',

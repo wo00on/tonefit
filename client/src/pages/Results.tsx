@@ -81,7 +81,7 @@ const Results = () => {
               {t('results.styleItems')}
             </h3>
             <p className="text-gray-600 text-center mb-12">
-              {t(`personalColor.${selectedColorType}`)} 타입에 어울리는 개별 아이템들을 확인해보세요
+              {t('results.subtitle')}
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
               {styleItems.map((item) => (
@@ -96,7 +96,7 @@ const Results = () => {
               {t('results.outfits')}
             </h3>
             <p className="text-gray-600 text-center mb-12">
-              전체적인 룩 완성을 위한 코디네이션 예시입니다
+              {t('results.outfitDesc')}
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {outfitRecommendations.map((outfit) => (
