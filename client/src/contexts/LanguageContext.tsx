@@ -165,6 +165,8 @@ const translations = {
     'results.recommendedColors': '추천 조화 컬러',
     'results.styleItems': '추천 스타일 아이템',
     'results.subtitle': '타입에 어울리는 개별 아이템들을 확인해보세요',
+    'results.outfitDesc': '전체적인 룩 완성을 위한 코디네이션 예시입니다',
+    'results.share': '결과 공유하기',
   },
   en: {
     // Navigation
@@ -320,6 +322,8 @@ const translations = {
     'results.recommendedColors': 'Recommended Harmony Colors',
     'results.styleItems': 'Recommended Style Items',
     'results.subtitle': 'Check out individual items that suit your type',
+    'results.outfitDesc': 'Complete outfit coordination examples for your look',
+    'results.share': 'Share Results',
   }
 };
 
