@@ -72,6 +72,35 @@ const translations = {
     // Common
     'common.loading': '로딩 중...',
     'common.error': '오류가 발생했습니다',
+    
+    // Footer
+    'footer.company': 'TONEFIT',
+    'footer.description': '퍼스널 컬러 분석 X 펜톤 컬러 조합을 통해 당신만의 완벽한 스타일을 찾아보세요.',
+    'footer.pantoneDesc': '2020-2025 펜톤 컬러와 조화로운 팔레트를 제공합니다.',
+    'footer.services': '서비스',
+    'footer.personalColorDiagnosis': '퍼스널 컬러 진단',
+    'footer.colorPalette': '컬러 팔레트',
+    'footer.stylingGuide': '스타일링 가이드',
+    'footer.support': '고객 지원',
+    'footer.faq': '자주 묻는 질문',
+    'footer.contact': '문의하기',
+    'footer.privacy': '개인정보처리방침',
+    'footer.copyright': '© 2024 TONEFIT. All rights reserved.',
+    
+    // Color Guide specific
+    'colorGuide.personalColor.title': '퍼스널 컬러란?',
+    'colorGuide.personalColor.desc': '개인의 타고난 신체적 특징(피부톤, 모발, 눈동자)에 조화롭게 어울리는 색상을 의미합니다.',
+    'colorGuide.personalColor.subtitle': '4가지 계절로 분류되며, 각각 고유한 특성과 매력을 가지고 있습니다.',
+    'colorGuide.pantoneColor.title': '펜톤 컬러란?',
+    'colorGuide.pantoneColor.desc': '팬톤(Pantone)은 매년 발표되는 트렌드 컬러로 패션, 그래픽, 제품 디자인 등 다양한 분야에서 색상 표준으로 사용됩니다.',
+    'colorGuide.pantoneColor.subtitle': '전 세계 디자이너들이 참고하는 권위 있는 컬러 가이드라인이며, 시대의 감성과 트렌드를 반영합니다.',
+    'colorGuide.pantoneFeatures.title': '펜톤 컬러의 특징',
+    'colorGuide.pantoneFeatures.global': '글로벌 표준',
+    'colorGuide.pantoneFeatures.globalDesc': '전 세계 통용되는 색상 표준 시스템',
+    'colorGuide.pantoneFeatures.trend': '트렌드 반영',
+    'colorGuide.pantoneFeatures.trendDesc': '시대적 감성과 문화적 트렌드 포함',
+    'colorGuide.pantoneFeatures.usage': '다양한 활용',
+    'colorGuide.pantoneFeatures.usageDesc': '패션, 인테리어, 브랜딩 등 폭넓은 적용',
   },
   en: {
     // Navigation
@@ -134,6 +163,35 @@ const translations = {
     // Common
     'common.loading': 'Loading...',
     'common.error': 'An error occurred',
+    
+    // Footer
+    'footer.company': 'TONEFIT',
+    'footer.description': 'Discover your perfect style through personal color analysis combined with Pantone color palettes.',
+    'footer.pantoneDesc': 'We provide harmonious palettes with Pantone Colors from 2020-2025.',
+    'footer.services': 'Services',
+    'footer.personalColorDiagnosis': 'Personal Color Analysis',
+    'footer.colorPalette': 'Color Palette',
+    'footer.stylingGuide': 'Styling Guide',
+    'footer.support': 'Customer Support',
+    'footer.faq': 'FAQ',
+    'footer.contact': 'Contact Us',
+    'footer.privacy': 'Privacy Policy',
+    'footer.copyright': '© 2024 TONEFIT. All rights reserved.',
+    
+    // Color Guide specific
+    'colorGuide.personalColor.title': 'What is Personal Color?',
+    'colorGuide.personalColor.desc': 'Colors that harmoniously match an individual\'s natural physical characteristics (skin tone, hair, eyes).',
+    'colorGuide.personalColor.subtitle': 'Classified into 4 seasons, each with unique characteristics and charm.',
+    'colorGuide.pantoneColor.title': 'What is Pantone Color?',
+    'colorGuide.pantoneColor.desc': 'Pantone is an annual trend color used as a color standard in various fields such as fashion, graphics, and product design.',
+    'colorGuide.pantoneColor.subtitle': 'An authoritative color guideline referenced by designers worldwide, reflecting the emotions and trends of the times.',
+    'colorGuide.pantoneFeatures.title': 'Features of Pantone Color',
+    'colorGuide.pantoneFeatures.global': 'Global Standard',
+    'colorGuide.pantoneFeatures.globalDesc': 'Universally accepted color standard system',
+    'colorGuide.pantoneFeatures.trend': 'Trend Reflection',
+    'colorGuide.pantoneFeatures.trendDesc': 'Includes contemporary emotions and cultural trends',
+    'colorGuide.pantoneFeatures.usage': 'Diverse Applications',
+    'colorGuide.pantoneFeatures.usageDesc': 'Wide application in fashion, interior, branding, etc.',
   }
 };
 

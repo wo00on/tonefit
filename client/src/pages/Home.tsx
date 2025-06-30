@@ -65,13 +65,12 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="col-span-2">
               <h5 className="text-2xl font-bold mb-4 font-english">
-                TONE<span className="text-primary">FIT</span>
+                {t('footer.company')}
               </h5>
               <p className="text-gray-400 mb-4">
-                퍼스널 컬러 분석 X 펜톤 컬러 조합을 통해 당신만의 완벽한
-                스타일을 찾아보세요.
+                {t('footer.description')}
                 <br />
-                2020-2025 펜톤 컬러와 조화로운 팔레트를 제공합니다.
+                {t('footer.pantoneDesc')}
               </p>
               <div className="flex space-x-4">
                 <a
@@ -101,48 +100,48 @@ const Home = () => {
               </div>
             </div>
             <div>
-              <h6 className="font-semibold mb-4">서비스</h6>
+              <h6 className="font-semibold mb-4">{t('footer.services')}</h6>
               <ul className="text-gray-400 space-y-2">
                 <li>
                   <a href="#" className="hover:text-white transition-colors">
-                    퍼스널 컬러 진단
+                    {t('footer.personalColorDiagnosis')}
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-white transition-colors">
-                    컬러 팔레트
+                    {t('footer.colorPalette')}
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-white transition-colors">
-                    스타일링 가이드
+                    {t('footer.stylingGuide')}
                   </a>
                 </li>
               </ul>
             </div>
             <div>
-              <h6 className="font-semibold mb-4">고객 지원</h6>
+              <h6 className="font-semibold mb-4">{t('footer.support')}</h6>
               <ul className="text-gray-400 space-y-2">
                 <li>
                   <a href="#" className="hover:text-white transition-colors">
-                    자주 묻는 질문
+                    {t('footer.faq')}
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-white transition-colors">
-                    문의하기
+                    {t('footer.contact')}
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-white transition-colors">
-                    개인정보처리방침
+                    {t('footer.privacy')}
                   </a>
                 </li>
               </ul>
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 TONEFIT. All rights reserved.</p>
+            <p>{t('footer.copyright')}</p>
           </div>
         </div>
       </footer>

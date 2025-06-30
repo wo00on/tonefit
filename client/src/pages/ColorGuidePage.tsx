@@ -95,11 +95,11 @@ const ColorGuidePage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-slide-up">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              퍼스널 컬러란?
+              {t('colorGuide.personalColor.title')}
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              개인의 타고난 신체적 특징(피부톤, 모발, 눈동자)에 조화롭게 어울리는 색상을 의미합니다.<br />
-              4가지 계절로 분류되며, 각각 고유한 특성과 매력을 가지고 있습니다.
+              {t('colorGuide.personalColor.desc')}<br />
+              {t('colorGuide.personalColor.subtitle')}
             </p>
           </div>
           
@@ -139,38 +139,37 @@ const ColorGuidePage = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-slide-up">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              펜톤 컬러란?
+              {t('colorGuide.pantoneColor.title')}
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed mb-8">
-              팬톤(Pantone)은 매년 발표되는 트렌드 컬러로 패션, 그래픽, 제품 디자인 등<br />
-              다양한 분야에서 색상 표준으로 사용됩니다. 전 세계 디자이너들이 참고하는<br />
-              권위 있는 컬러 가이드라인이며, 시대의 감성과 트렌드를 반영합니다.
+              {t('colorGuide.pantoneColor.desc')}<br />
+              {t('colorGuide.pantoneColor.subtitle')}
             </p>
             <div className="bg-gray-50 rounded-2xl p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                펜톤 컬러의 특징
+                {t('colorGuide.pantoneFeatures.title')}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="text-center">
                   <div className="w-12 h-12 bg-primary rounded-full mx-auto mb-3 flex items-center justify-center">
                     <span className="text-white font-bold">1</span>
                   </div>
-                  <h4 className="font-semibold text-gray-900 mb-2">글로벌 표준</h4>
-                  <p className="text-sm text-gray-600">전 세계 통용되는 색상 표준 시스템</p>
+                  <h4 className="font-semibold text-gray-900 mb-2">{t('colorGuide.pantoneFeatures.global')}</h4>
+                  <p className="text-sm text-gray-600">{t('colorGuide.pantoneFeatures.globalDesc')}</p>
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-secondary rounded-full mx-auto mb-3 flex items-center justify-center">
                     <span className="text-white font-bold">2</span>
                   </div>
-                  <h4 className="font-semibold text-gray-900 mb-2">트렌드 반영</h4>
-                  <p className="text-sm text-gray-600">시대적 감성과 문화적 트렌드 포함</p>
+                  <h4 className="font-semibold text-gray-900 mb-2">{t('colorGuide.pantoneFeatures.trend')}</h4>
+                  <p className="text-sm text-gray-600">{t('colorGuide.pantoneFeatures.trendDesc')}</p>
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-primary rounded-full mx-auto mb-3 flex items-center justify-center">
                     <span className="text-white font-bold">3</span>
                   </div>
-                  <h4 className="font-semibold text-gray-900 mb-2">다양한 활용</h4>
-                  <p className="text-sm text-gray-600">패션, 인테리어, 브랜딩 등 폭넓은 적용</p>
+                  <h4 className="font-semibold text-gray-900 mb-2">{t('colorGuide.pantoneFeatures.usage')}</h4>
+                  <p className="text-sm text-gray-600">{t('colorGuide.pantoneFeatures.usageDesc')}</p>
                 </div>
               </div>
             </div>
