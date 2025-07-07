@@ -1,4 +1,5 @@
 import { PersonalColorType, ColorData } from '@/types/color';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 interface PaletteViewerProps {
   colorData: ColorData;
@@ -6,6 +7,7 @@ interface PaletteViewerProps {
 }
 
 const PaletteViewer = ({ colorData, selectedColorType }: PaletteViewerProps) => {
+  const { t } = useLanguage();
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
       {Object.entries(colorData).map(([year, pantoneColor]) => {
@@ -28,7 +30,7 @@ const PaletteViewer = ({ colorData, selectedColorType }: PaletteViewerProps) => 
             
             <div className="mb-6">
               <h5 className="text-lg font-semibold text-gray-900 mb-3">
-                추천 조화 컬러
+                {t('results.recommendedColors')}
               </h5>
               <div className="flex space-x-3">
                 {palette.map((color, index) => (

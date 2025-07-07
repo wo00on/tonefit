@@ -17,7 +17,7 @@ export default function LanguageToggle() {
       className="fixed top-4 right-4 z-50 bg-white/80 backdrop-blur-sm border border-gray-200/70 hover:bg-white/90 shadow-sm hover:shadow-md transition-all duration-200"
     >
       <Globe className="w-4 h-4 mr-1" />
-      {language === 'ko' ? 'EN' : '한국어'}
+      {language === 'ko' ? 'EN' : 'KO'}
     </Button>
   );
 }

@@ -3,6 +3,29 @@ import { useLocation } from "wouter";
 import ColorSelector from "@/components/ColorSelector";
 import { PersonalColorType } from "@/types/color";
 import { useLanguage } from "@/contexts/LanguageContext";
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
+import Carousel from '../components/Carousel';
+import carousel1 from '../assets/carousel1.png';
+import carousel2 from '../assets/carousel2.png';
+import carousel3 from '../assets/carousel3.png';
+import carousel4 from '../assets/carousel4.png';
+import carousel5 from '../assets/carousel5.png';
+import carousel6 from '../assets/carousel6.png';
+import carousel7 from '../assets/carousel7.png';
+import carousel8 from '../assets/carousel8.png';
+import carousel9 from '../assets/carousel9.png';
+import heroBg from '../assets/Main1.png';
+import shoe1 from '../assets/shoe1.png';
+import shoe2 from '../assets/shoe2.png';
+import shoe3 from '../assets/shoe3.png';
+import shoe4 from '../assets/shoe4.png';
+import shoe5 from '../assets/shoe5.png';
+import shoe6 from '../assets/shoe6.png';
+import shoe7 from '../assets/shoe7.png';
+import shoe8 from '../assets/shoe8.png';
+import shoe9 from '../assets/shoe9.png';
+import shoe10 from '../assets/shoe10.png';
 
 const Home = () => {
   const [, setLocation] = useLocation();
@@ -31,9 +54,24 @@ const Home = () => {
       {/* Hero Section */}
       <section
         id="home"
-        className="bg-gradient-to-br from-pink-100 via-purple-50 to-indigo-100 py-20"
+        className="bg-gradient-to-br from-pink-100 via-purple-50 to-indigo-100 py-32 relative overflow-hidden"
+        style={{
+          backgroundImage: `linear-gradient(to bottom right, #fce7f3, #f3e8ff, #c7d2fe)`
+        }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {/* 배경 이미지 오버레이 */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full z-0 pointer-events-none"
+          style={{
+            backgroundImage: `url(${heroBg})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            opacity: 0.69,
+          }}
+        />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <div className="animate-fade-in">
             <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
               {t('home.title')}
@@ -58,6 +96,42 @@ const Home = () => {
           selectedColor={selectedColor}
         />
       </div>
+
+      {/* Carousel Section */}
+      <section className="my-12 p-0">
+        <Carousel
+          images={[
+            carousel1,
+            carousel2,
+            carousel3,
+            carousel4,
+            carousel5,
+            carousel6,
+            carousel7,
+            carousel8,
+            carousel9,
+          ]}
+          autoPlayInterval={2000}
+        />
+        <div className="mt-12">
+          <Carousel
+            images={[
+              shoe1,
+              shoe2,
+              shoe3,
+              shoe4,
+              shoe5,
+              shoe6,
+              shoe7,
+              shoe8,
+              shoe9,
+              shoe10,
+            ]}
+            autoPlayInterval={2000}
+            autoPlayDirection="rtl"
+          />
+        </div>
+      </section>
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">

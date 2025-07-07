@@ -14,10 +14,10 @@ const Results = () => {
   const selectedColorType = params?.colorType as PersonalColorType;
 
   const seasonNames = {
-    'spring': '봄웜 (Spring)',
-    'summer': '여름쿨 (Summer)',
-    'autumn': '가을웜 (Autumn)',
-    'winter': '겨울쿨 (Winter)'
+    'spring': t('personalColor.spring'),
+    'summer': t('personalColor.summer'),
+    'autumn': t('personalColor.autumn'),
+    'winter': t('personalColor.winter')
   };
 
   const outfitRecommendations = getOutfitsByTone(selectedColorType);
@@ -25,8 +25,8 @@ const Results = () => {
 
   const handleShare = async () => {
     const shareData = {
-      title: 'TONEFIT 퍼스널 컬러 결과',
-      text: `나의 퍼스널 컬러는 ${seasonNames[selectedColorType]}입니다!`,
+      title: t('results.shareTitle'),
+      text: `${t('results.shareText')}: ${seasonNames[selectedColorType]}`,
       url: window.location.href
     };
 
@@ -35,7 +35,7 @@ const Results = () => {
         await navigator.share(shareData);
       } else {
         await navigator.clipboard.writeText(`${shareData.text} ${shareData.url}`);
-        alert('결과가 클립보드에 복사되었습니다!');
+        alert(t('results.copiedToClipboard'));
       }
     } catch (error) {
       console.error('Error sharing:', error);
@@ -46,9 +46,9 @@ const Results = () => {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">잘못된 접근입니다</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">{t('results.invalidAccess')}</h2>
           <Link href="/">
-            <a className="text-primary hover:underline">홈으로 돌아가기</a>
+            <a className="text-primary hover:underline">{t('results.backToHome')}</a>
           </Link>
         </div>
       </div>

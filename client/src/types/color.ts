@@ -15,11 +15,11 @@ export interface ColorData {
 
 export interface OutfitRecommendation {
   id: string;
-  title: string;
-  description: string;
+  title: { ko: string; en: string };
+  description: { ko: string; en: string };
   imageUrl: string;
   colors: string[];
-  tags: string[];
+  tags: { ko: string; en: string }[];
   personalColorType: PersonalColorType;
 }
 
@@ -29,8 +29,4 @@ export interface PersonalColorInfo {
   description: string;
   characteristics: string[];
   icon: string;
-  bgColor: string;
-  gradientFrom: string;
-  gradientTo: string;
-  iconColor: string;
 }
