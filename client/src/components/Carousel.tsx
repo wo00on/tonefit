@@ -7,7 +7,7 @@ interface CarouselProps {
   autoPlayInterval?: number;
   autoPlayDirection?: 'ltr' | 'rtl';
 }
-
+/////해삐
 const Carousel: React.FC<CarouselProps> = ({ images, autoPlayInterval = 2000, autoPlayDirection = 'ltr' }) => {
   const items = images.map((src, idx) => (
     <div key={src} className="flex justify-center items-center w-full h-full mx-0">
