@@ -29,4 +29,10 @@ export interface PersonalColorInfo {
   description: string;
   characteristics: string[];
   icon: string;
+  bgColor: string;
+  gradientFrom: string;
+  gradientTo: string;
+  iconColor: string;
+  accentColor: string;
+  textColor: string;
 }

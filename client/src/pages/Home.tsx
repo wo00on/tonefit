@@ -26,6 +26,146 @@ import shoe7 from '../assets/shoe7.png';
 import shoe8 from '../assets/shoe8.png';
 import shoe9 from '../assets/shoe9.png';
 import shoe10 from '../assets/shoe10.png';
+import blo1 from '@/assets/blo (1).png';
+import blo2 from '@/assets/blo (2).png';
+import blo3 from '@/assets/blo (3).png';
+import blo4 from '@/assets/blo (4).png';
+import blo5 from '@/assets/blo (5).png';
+import blo6 from '@/assets/blo (6).png';
+import blo7 from '@/assets/blo (7).png';
+import blo8 from '@/assets/blo (8).png';
+import blo9 from '@/assets/blo (9).png';
+
+// FeedCardBig 컴포넌트 복원
+function FeedCardBig({ feed }: { feed: typeof feedMock[0] }) {
+  return (
+    <div className="bg-white overflow-hidden flex flex-col border border-gray-200 shadow-sm w-full h-full">
+      <div className="flex items-center px-4 pt-3 pb-2">
+        <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 font-bold mr-3 text-lg">
+          {feed.user[0].toUpperCase()}
+        </div>
+        <div className="font-bold text-gray-800">@{feed.user}</div>
+      </div>
+      {feed.image && (
+        <div className="w-full h-[440px] bg-gray-100 overflow-hidden">
+          <img src={feed.image} alt="피드 이미지" className="w-full h-full object-cover" />
+        </div>
+      )}
+      <div className="px-4 py-3 flex-1 flex flex-col">
+        <div className="mb-2 whitespace-pre-line text-gray-900 text-base line-clamp-4">{feed.content}</div>
+        <div className="flex items-center space-x-2 mt-auto">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5 text-gray-400">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+          </svg>
+          <span className="text-gray-500 text-xs">{feed.likes}</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// 피드 모의 데이터 복원
+const feedMock = [
+  {
+    id: 1,
+    user: "tonefit_user",
+    content: "오늘의 컬러 매칭! #퍼스널컬러 #펜톤",
+    image: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80",
+    likes: 3,
+  },
+  {
+    id: 2,
+    user: "guest1",
+    content: "봄웜 팔레트 추천받고 싶어요~",
+    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
+    likes: 1,
+  },
+  {
+    id: 3,
+    user: "colorlover",
+    content: "#여름쿨 오늘의 데일리룩!",
+    image: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
+    likes: 5,
+  },
+  {
+    id: 4,
+    user: "fashionista",
+    content: "#가을웜 브라운 코디 완성!",
+    image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80",
+    likes: 2,
+  },
+  {
+    id: 5,
+    user: "trendsetter",
+    content: "#펜톤 2024 Peach Fuzz 컬러 소품!",
+    image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80",
+    likes: 4,
+  },
+  {
+    id: 6,
+    user: "guest2",
+    content: "#겨울쿨 블루 니트 추천해요",
+    image: "https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=400&q=80",
+    likes: 2,
+  },
+  {
+    id: 7,
+    user: "palettefan",
+    content: "#봄웜 #핑크 오늘의 립 컬러",
+    image: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80",
+    likes: 3,
+  },
+  {
+    id: 8,
+    user: "guest3",
+    content: "#여름쿨 #화이트셔츠 심플룩",
+    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
+    likes: 1,
+  },
+  // 추가 영어/혼합 데이터 6개
+  {
+    id: 9,
+    user: "jane_doe",
+    content: "Love this #Pantone2024 color! So fresh and trendy.",
+    image: "https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=400&q=80",
+    likes: 7,
+  },
+  {
+    id: 10,
+    user: "minji",
+    content: "오늘은 #봄웜 스타일로 코디했어요! #OOTD",
+    image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80",
+    likes: 6,
+  },
+  {
+    id: 11,
+    user: "alex",
+    content: "Trying out a new personal color palette. Any thoughts?",
+    image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80",
+    likes: 2,
+  },
+  {
+    id: 12,
+    user: "soyoung",
+    content: "#가을웜 #브라운 오늘의 립 추천!",
+    image: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
+    likes: 5,
+  },
+  {
+    id: 13,
+    user: "mike",
+    content: "Pantone color of the year is amazing! #colortrend",
+    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
+    likes: 4,
+  },
+  {
+    id: 14,
+    user: "eunji",
+    content: "오늘은 화사한 #봄웜 컬러로 기분전환!",
+    image: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80",
+    likes: 3,
+  },
+];
 
 const Home = () => {
   const [, setLocation] = useLocation();
@@ -48,6 +188,9 @@ const Home = () => {
       colorSectionElement.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  // Masonry 이미지 배열 생성
+  const masonryImages = [blo1, blo2, blo3, blo4, blo5, blo6, blo7, blo8, blo9];
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -73,15 +216,11 @@ const Home = () => {
         />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <div className="animate-fade-in">
-            <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              {t('home.title')}
-            </h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-              {t('home.subtitle')}
-            </p>
+            <h2 className="text-4xl md:text-6xl font-black text-white drop-shadow-lg mb-6" dangerouslySetInnerHTML={{ __html: t('home.title') }} />
+            <p className="text-xl text-white drop-shadow-md mb-8 max-w-2xl mx-auto leading-relaxed font-semibold" dangerouslySetInnerHTML={{ __html: t('home.subtitle') }} />
             <button
               onClick={startColorTest}
-              className="bg-primary hover:bg-pink-600 text-white font-semibold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              className="bg-orange-100 hover:bg-orange-200 text-orange-800 font-semibold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               {t('home.cta')}
             </button>
@@ -96,7 +235,33 @@ const Home = () => {
           selectedColor={selectedColor}
         />
       </div>
-
+      {/* 언밸런스 피드 레이아웃 */}
+      <div className="max-w-5xl mx-auto py-8">
+        <h3 className="text-xl font-bold mb-4 text-gray-800">최신 피드</h3>
+        <div className="flex flex-col md:flex-row gap-6 justify-start items-start">
+          {/* 왼쪽: 대표 피드 카드 */}
+          <div className="w-[480px] h-[650px]">
+            <FeedCardBig feed={{ ...feedMock[0], image: blo1 }} />
+          </div>
+          {/* 오른쪽: Masonry 썸네일 그리드 */}
+          <div className="w-[480px]" style={{ columnCount: 3, columnGap: '12px' }}>
+            {masonryImages.map((img, idx) => {
+              // Masonry 느낌을 위해 다양한 높이 배열 사용
+              const heights = [140, 200, 170, 230, 160, 210, 180, 220, 150];
+              return (
+                <div key={idx} className="mb-3 break-inside-avoid">
+                  <img
+                    src={img}
+                    alt={`썸네일${idx+1}`}
+                    className="w-full object-cover"
+                    style={{ height: `${heights[idx % heights.length]}px` }}
+                  />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
       {/* Carousel Section */}
       <section className="my-12 p-0">
         <Carousel

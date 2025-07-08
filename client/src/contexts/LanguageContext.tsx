@@ -19,11 +19,14 @@ const translations = {
     "nav.home": "홈",
     "nav.colorGuide": "컬러 가이드",
     "nav.quiz": "퍼스널 컬러 진단 키트",
+    "nav.login": "로그인",
+    "nav.feed": "피드",
+    "nav.mypage": "마이페이지",
 
     // Home Page
-    "home.title": "TONEFIT이 제안하는 퍼스널 × 펜톤 컬러 매칭",
+    "home.title": '<span class="text-white font-black">TONEFIT</span>이 제안하는 <span class="text-white font-black">퍼스널</span> × <span class="text-white font-black">펜톤</span> 컬러 매칭',
     "home.subtitle":
-      "당신만의 퍼스널 컬러와 2020-2025 펜톤 트렌드 컬러의 조화를 찾아보세요",
+      '당신만의 <span class="text-white font-bold">퍼스널 컬러</span>와 2020-2025 <span class="text-white font-bold">펜톤</span> 트렌드 컬러의 조화를 찾아보세요',
     "home.cta": "컬러 매칭 시작하기 →",
     "home.features.title": "왜 TONEFIT을 선택해야 할까요?",
     "home.features.personal.title": "퍼스널 컬러 분석",
@@ -197,11 +200,14 @@ const translations = {
     "nav.home": "Home",
     "nav.colorGuide": "Color Guide",
     "nav.quiz": "Personal Color Diagnosis",
+    "nav.login": "Login",
+    "nav.feed": "Feed",
+    "nav.mypage": "My Page",
 
     // Home Page
-    "home.title": "Personal × Pantone Color Matching by TONEFIT",
+    "home.title": '<span class="text-white font-black">TONEFIT</span> Personal × <span class="text-white font-black">Pantone</span> Color Matching',
     "home.subtitle":
-      "Discover the perfect harmony between your personal colors and Pantone trend colors from 2020-2025",
+      'Discover the perfect harmony between your <span class="text-white font-bold">personal colors</span> and <span class="text-white font-bold">Pantone</span> trend colors from 2020-2025',
     "home.cta": "Start Color Matching →",
     "home.features.title": "Why Choose TONEFIT?",
     "home.features.personal.title": "Personal Color Analysis",

@@ -15,7 +15,7 @@ const Carousel: React.FC<CarouselProps> = ({ images, autoPlayInterval = 2000, au
         src={src}
         alt={`carousel${idx + 1}`}
         className="rounded-xl object-cover"
-        style={{ width: '250px', height: '250px', aspectRatio: '1 / 1' }}
+        style={{ width: '120px', height: '120px', aspectRatio: '1 / 1' }}
         draggable={false}
       />
     </div>
@@ -26,7 +26,7 @@ const Carousel: React.FC<CarouselProps> = ({ images, autoPlayInterval = 2000, au
     0: { items: 1 },
     600: { items: 2 },
     900: { items: 3 },
-    1200: { items: 5 },
+    1200: { items: 9 },
   };
 
   return (

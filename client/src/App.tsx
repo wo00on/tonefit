@@ -11,6 +11,9 @@ import Results from "@/pages/Results";
 import ColorGuidePage from "@/pages/ColorGuidePage";
 import Quiz from "@/pages/Quiz";
 import NotFound from "@/pages/not-found";
+import Login from "@/pages/Login";
+import Feed from "@/pages/Feed";
+import MyPage from "@/pages/MyPage";
 
 function Router() {
   return (
@@ -19,6 +22,9 @@ function Router() {
       <Route path="/color-guide" component={ColorGuidePage} />
       <Route path="/quiz" component={Quiz} />
       <Route path="/results/:colorType" component={Results} />
+      <Route path="/login" component={Login} />
+      <Route path="/feed" component={Feed} />
+      <Route path="/mypage" component={MyPage} />
       <Route component={NotFound} />
     </Switch>
   );
