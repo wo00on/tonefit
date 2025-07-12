@@ -176,8 +176,9 @@ tonefit/
 
 ## 📞 연락처
 
-- **프로젝트 링크**: [https://github.com/your-username/tonefit](https://github.com/your-username/tonefit)
-- **이메일**: your-email@example.com
+- **프로젝트 링크**: 
+- **이메일**: woony8959@gmail.com
+- **BLOG**
 
 ## 🙏 감사의 말
 
@@ -188,3 +189,6 @@ tonefit/
 ---
 
 ⭐ 이 프로젝트가 도움이 되었다면 스타를 눌러주세요!
+
+
+-
