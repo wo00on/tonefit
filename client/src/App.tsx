@@ -14,6 +14,7 @@ import NotFound from "@/pages/not-found";
 import Login from "@/pages/Login";
 import Feed from "@/pages/Feed";
 import MyPage from "@/pages/MyPage";
+import PersonalColorShowcase from "@/pages/PersonalColorShowcase";
 
 function Router() {
   return (
@@ -22,9 +23,7 @@ function Router() {
       <Route path="/color-guide" component={ColorGuidePage} />
       <Route path="/quiz" component={Quiz} />
       <Route path="/results/:colorType" component={Results} />
-      <Route path="/login" component={Login} />
-      <Route path="/feed" component={Feed} />
-      <Route path="/mypage" component={MyPage} />
+      <Route path="/personal-colors" component={PersonalColorShowcase} />
       <Route component={NotFound} />
     </Switch>
   );

@@ -22,6 +22,7 @@ const translations = {
     "nav.login": "로그인",
     "nav.feed": "피드",
     "nav.mypage": "마이페이지",
+    "nav.personalColors": "퍼스널 컬러",
 
     // Home Page
     "home.title": '<span class="text-white font-black">TONEFIT</span>이 제안하는 <span class="text-white font-black">퍼스널</span> × <span class="text-white font-black">펜톤</span> 컬러 매칭',
@@ -194,6 +195,27 @@ const translations = {
     "footer.contact": "문의하기",
     "footer.privacy": "개인정보처리방침",
     "footer.copyright": "© 2024 TONEFIT. All rights reserved.",
+
+    // Feed Section
+    "feed.latest": "최신 피드",
+    "insight.title": "유저 인사이트",
+    "insight.popularColor": "이번 주 인기 컬러",
+    "insight.pantoneDesc": "2024 펜톤 컬러",
+    "insight.topTone": "가장 많이 선택된 톤",
+    "insight.tone.summerCool": "여름 쿨",
+    "insight.userChoice": "유저 선택",
+    "insight.feedCount": "이번 주 피드 수",
+    "insight.totalFeed": "전체 피드",
+    "insight.topTags": "인기 해시태그",
+    "insight.tag.springWarm": "#봄웜",
+    "insight.tag.peachFuzz": "#PeachFuzz",
+    "insight.tag.trend": "#트렌드",
+    "insight.activeUsers": "활동 유저 수",
+    "insight.thisWeek": "이번 주 기준",
+    "gallery.title": "오늘의 스타일 갤러리",
+    "gallery.tip": "Peach Fuzz와 라이트 베이지를 매치하면 부드럽고 세련된 봄 코디 완성! 밝은 컬러의 스카프나 액세서리로 포인트를 더해보세요.",
+    "gallery.tipBy": "- TONEFIT AI",
+    "tip.title": "오늘의 패션/컬러 팁",
   },
   en: {
     // Navigation
@@ -203,6 +225,7 @@ const translations = {
     "nav.login": "Login",
     "nav.feed": "Feed",
     "nav.mypage": "My Page",
+    "nav.personalColors": "Personal Colors",
 
     // Home Page
     "home.title": '<span class="text-white font-black">TONEFIT</span> Personal × <span class="text-white font-black">Pantone</span> Color Matching',
@@ -383,6 +406,27 @@ const translations = {
     "footer.contact": "Contact Us",
     "footer.privacy": "Privacy Policy",
     "footer.copyright": "© 2024 TONEFIT. All rights reserved.",
+
+    // Feed Section (EN)
+    "feed.latest": "Latest Feed",
+    "insight.title": "User Insight",
+    "insight.popularColor": "Popular Color of the Week",
+    "insight.pantoneDesc": "2024 Pantone Color",
+    "insight.topTone": "Most Selected Tone",
+    "insight.tone.summerCool": "Summer Cool",
+    "insight.userChoice": "user choice",
+    "insight.feedCount": "Feed Count This Week",
+    "insight.totalFeed": "Total Feed",
+    "insight.topTags": "Top Hashtags",
+    "insight.tag.springWarm": "#SpringWarm",
+    "insight.tag.peachFuzz": "#PeachFuzz",
+    "insight.tag.trend": "#Trend",
+    "insight.activeUsers": "Active Users",
+    "insight.thisWeek": "This Week",
+    "gallery.title": "Today's Style Gallery",
+    "gallery.tip": "Match Peach Fuzz with light beige for a soft and sophisticated spring look! Add a pop with a bright scarf or accessory.",
+    "gallery.tipBy": "- TONEFIT AI",
+    "tip.title": "Today's Fashion/Color Tip",
   },
 };
 

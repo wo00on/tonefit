@@ -38,25 +38,11 @@ const Navigation = () => {
                 {t('nav.quiz')}
               </span>
             </Link>
-            <Link href="/login">
+            <Link href="/personal-colors">
               <span className={`text-gray-700 hover:text-black hover:underline hover:underline-offset-4 hover:decoration-2 transition-colors font-medium cursor-pointer ${
-                location === '/login' ? 'text-black underline underline-offset-4 decoration-2' : ''
+                location === '/personal-colors' ? 'text-black underline underline-offset-4 decoration-2' : ''
               }`}>
-                {t('nav.login')}
-              </span>
-            </Link>
-            <Link href="/feed">
-              <span className={`text-gray-700 hover:text-black hover:underline hover:underline-offset-4 hover:decoration-2 transition-colors font-medium cursor-pointer ${
-                location === '/feed' ? 'text-black underline underline-offset-4 decoration-2' : ''
-              }`}>
-                {t('nav.feed')}
-              </span>
-            </Link>
-            <Link href="/mypage">
-              <span className={`text-gray-700 hover:text-black hover:underline hover:underline-offset-4 hover:decoration-2 transition-colors font-medium cursor-pointer ${
-                location === '/mypage' ? 'text-black underline underline-offset-4 decoration-2' : ''
-              }`}>
-                {t('nav.mypage')}
+                {t('nav.personalColors')}
               </span>
             </Link>
           </div>

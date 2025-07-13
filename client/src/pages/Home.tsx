@@ -236,29 +236,88 @@ const Home = () => {
         />
       </div>
       {/* 언밸런스 피드 레이아웃 */}
-      <div className="max-w-5xl mx-auto py-8">
-        <h3 className="text-xl font-bold mb-4 text-gray-800">최신 피드</h3>
+      <div className="max-w-7xl mx-auto py-8">
+        <h3 className="text-xl font-bold mb-4 text-gray-800">{t('feed.latest')}</h3>
         <div className="flex flex-col md:flex-row gap-6 justify-start items-start">
-          {/* 왼쪽: 대표 피드 카드 */}
-          <div className="w-[480px] h-[650px]">
-            <FeedCardBig feed={{ ...feedMock[0], image: blo1 }} />
-          </div>
-          {/* 오른쪽: Masonry 썸네일 그리드 */}
-          <div className="w-[480px]" style={{ columnCount: 3, columnGap: '12px' }}>
-            {masonryImages.map((img, idx) => {
-              // Masonry 느낌을 위해 다양한 높이 배열 사용
-              const heights = [140, 200, 170, 230, 160, 210, 180, 220, 150];
-              return (
-                <div key={idx} className="mb-3 break-inside-avoid">
-                  <img
-                    src={img}
-                    alt={`썸네일${idx+1}`}
-                    className="w-full object-cover"
-                    style={{ height: `${heights[idx % heights.length]}px` }}
-                  />
+          {/* 왼쪽: 유저 인사이트 통계 카드 (더 다양한 정보 추가) */}
+          <div className="w-[500px] h-[650px]">
+            <div className="bg-white rounded-3xl shadow-xl p-8 flex flex-col justify-between h-full w-full">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('insight.title')}</h2>
+              <div className="mb-6">
+                <div className="flex items-center mb-2">
+                  <span className="w-3 h-3 rounded-full bg-pink-400 mr-2"></span>
+                  <span className="font-semibold text-gray-700">{t('insight.popularColor')}</span>
                 </div>
-              );
-            })}
+                <div className="text-lg font-bold text-pink-500 mb-1">Peach Fuzz</div>
+                <div className="text-xs text-gray-400">{t('insight.pantoneDesc')}</div>
+              </div>
+              <div className="mb-6">
+                <div className="flex items-center mb-2">
+                  <span className="w-3 h-3 rounded-full bg-blue-400 mr-2"></span>
+                  <span className="font-semibold text-gray-700">{t('insight.topTone')}</span>
+                </div>
+                <div className="text-lg font-bold text-blue-500 mb-1">{t('insight.tone.summerCool')}</div>
+                <div className="w-full bg-gray-100 rounded-full h-2 mt-2">
+                  <div className="bg-blue-400 h-2 rounded-full" style={{ width: '41%' }}></div>
+                </div>
+                <div className="text-xs text-gray-400 mt-1">41% {t('insight.userChoice')}</div>
+              </div>
+              <div className="mb-6">
+                <div className="flex items-center mb-2">
+                  <span className="w-3 h-3 rounded-full bg-green-400 mr-2"></span>
+                  <span className="font-semibold text-gray-700">{t('insight.feedCount')}</span>
+                </div>
+                <div className="text-lg font-bold text-green-500 mb-1">124</div>
+                <div className="text-xs text-gray-400">{t('insight.totalFeed')}</div>
+              </div>
+              <div className="mb-6">
+                <div className="flex items-center mb-2">
+                  <span className="w-3 h-3 rounded-full bg-yellow-400 mr-2"></span>
+                  <span className="font-semibold text-gray-700">{t('insight.topTags')}</span>
+                </div>
+                <div className="flex gap-2 flex-wrap">
+                  <span className="bg-yellow-100 text-yellow-700 px-2 py-1 rounded text-xs font-semibold">{t('insight.tag.springWarm')}</span>
+                  <span className="bg-yellow-100 text-yellow-700 px-2 py-1 rounded text-xs font-semibold">{t('insight.tag.peachFuzz')}</span>
+                  <span className="bg-yellow-100 text-yellow-700 px-2 py-1 rounded text-xs font-semibold">{t('insight.tag.trend')}</span>
+                </div>
+              </div>
+              <div>
+                <div className="flex items-center mb-2">
+                  <span className="w-3 h-3 rounded-full bg-purple-400 mr-2"></span>
+                  <span className="font-semibold text-gray-700">{t('insight.activeUsers')}</span>
+                </div>
+                <div className="text-lg font-bold text-purple-500 mb-1">57</div>
+                <div className="text-xs text-gray-400">{t('insight.thisWeek')}</div>
+              </div>
+            </div>
+          </div>
+          {/* 오른쪽: Masonry 썸네일 + 오늘의 패션/컬러 팁 */}
+          <div className="w-[1000px] h-[650px] bg-white rounded-3xl shadow-xl p-8 flex flex-col justify-between">
+            <div className="flex-1 overflow-y-auto mb-6">
+              <h2 className="text-xl font-bold text-gray-900 mb-4 text-center">{t('gallery.title')}</h2>
+              <div style={{ columnCount: 3, columnGap: '12px' }}>
+                {masonryImages.map((img, idx) => {
+                  const heights = [140, 200, 170, 230, 160, 210, 180, 220, 150];
+                  return (
+                    <div key={idx} className="mb-3 break-inside-avoid">
+                      <img
+                        src={img}
+                        alt={`썸네일${idx+1}`}
+                        className="w-full object-cover rounded-lg shadow"
+                        style={{ height: `${heights[idx % heights.length]}px` }}
+                      />
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+            <div>
+              <h3 className="text-lg font-bold text-gray-900 mb-3 text-center">{t('tip.title')}</h3>
+              <div className="bg-gray-50 rounded-xl p-5 text-center shadow-sm">
+                <div className="text-base text-gray-700 mb-2">{t('gallery.tip')}</div>
+                <div className="text-sm text-gray-400">{t('gallery.tipBy')}</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
