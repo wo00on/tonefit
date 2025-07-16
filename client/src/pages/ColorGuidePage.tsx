@@ -1,3 +1,4 @@
+import React from "react";
 import { PersonalColorInfo } from '@/types/color';
 import colorDataJson from '@/data/colorData.json';
 import { useLanguage } from '@/contexts/LanguageContext';

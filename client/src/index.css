@@ -58,7 +58,7 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-gray-200;
   }
 
   body {
@@ -152,6 +152,14 @@
 
   .shadow-primary {
     box-shadow: 0 0 0 4px rgba(255, 107, 138, 0.1);
+  }
+
+  .bg-background {
+    background-color: var(--background);
+  }
+
+  .text-foreground {
+    color: var(--foreground);
   }
 }
 
