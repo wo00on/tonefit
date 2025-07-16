@@ -47,7 +47,7 @@ const Results = () => {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">{t('results.invalidAccess')}</h2>
-          <Link href="/">
+          <Link href="">
             <a className="text-primary hover:underline">{t('results.backToHome')}</a>
           </Link>
         </div>
@@ -107,7 +107,7 @@ const Results = () => {
 
           {/* Action Buttons */}
           <div className="text-center">
-            <Link href="/">
+            <Link href="">
               <button className="bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 mr-4">
                 <svg className="inline-block w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />

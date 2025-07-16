@@ -11,35 +11,35 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <Link href="/">
+            <Link href="">
               <h1 className="text-2xl font-bold text-gray-900 font-english cursor-pointer">
                 TONE<span className="text-primary">FIT</span>
               </h1>
             </Link>
           </div>
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/">
+            <Link href="">
               <span className={`text-gray-700 hover:text-black hover:underline hover:underline-offset-4 hover:decoration-2 transition-colors font-medium cursor-pointer ${
                 location === '/' ? 'text-black underline underline-offset-4 decoration-2' : ''
               }`}>
                 {t('nav.home')}
               </span>
             </Link>
-            <Link href="/color-guide">
+            <Link href="color-guide">
               <span className={`text-gray-700 hover:text-black hover:underline hover:underline-offset-4 hover:decoration-2 transition-colors font-medium cursor-pointer ${
                 location === '/color-guide' ? 'text-black underline underline-offset-4 decoration-2' : ''
               }`}>
                 {t('nav.colorGuide')}
               </span>
             </Link>
-            <Link href="/quiz">
+            <Link href="quiz">
               <span className={`text-gray-700 hover:text-black hover:underline hover:underline-offset-4 hover:decoration-2 transition-colors font-medium cursor-pointer ${
                 location === '/quiz' ? 'text-black underline underline-offset-4 decoration-2' : ''
               }`}>
                 {t('nav.quiz')}
               </span>
             </Link>
-            <Link href="/personal-colors">
+            <Link href="personal-colors">
               <span className={`text-gray-700 hover:text-black hover:underline hover:underline-offset-4 hover:decoration-2 transition-colors font-medium cursor-pointer ${
                 location === '/personal-colors' ? 'text-black underline underline-offset-4 decoration-2' : ''
               }`}>

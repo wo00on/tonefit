@@ -401,7 +401,7 @@ const ColorGuidePage = () => {
               {t('colorGuide.cta.desc')}
             </p>
             <motion.a 
-              href="/"
+              href=""
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="inline-block bg-white hover:bg-gray-50 text-purple-600 font-bold py-5 px-10 rounded-full text-lg transition-all duration-300 shadow-2xl hover:shadow-3xl"
